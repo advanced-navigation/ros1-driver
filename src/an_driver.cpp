@@ -178,10 +178,10 @@ int main(int argc, char *argv[]) {
 		baud_rate = atoi(argv[1]);
 		state = 3;
 	}
-	/*else{
+	else{
 		getargs(argc, argv, &args);
 		state = 0;
-	}*/
+	}
 
 	pnh.param("imu_frame_id", imu_frame_id, std::string("imu"));
 	pnh.param("nav_sat_frame_id", nav_sat_frame_id, std::string("gps"));
