@@ -18,11 +18,14 @@ If you require any assistance using this code, please email support@advancednavi
 
 ## ROS1 Getting Started Guide
 
-The following guides are useful in getting started with ROS2 if you are not familiar:
+The following guides are useful in getting started with ROS1 if you are not familiar:
 
 - Setting up a ROS1 Workspace: http://wiki.ros.org/catkin/Tutorials/create_a_workspace
 - Basic Tutorial on importing an Example ROS1 code and compiling and running: http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29
-
+- Set up your serial port so they are visible: 
+ ```
+  sudo adduser user_name dialout
+  ```
 
 ## Build Instruction
 
@@ -37,7 +40,7 @@ The following guides are useful in getting started with ROS2 if you are not fami
     ```
     catkin_make
     ```
-    - Source the ROS2 Environment to the current folder:
+    - Source the ROS1 Environment to the current folder:
     ```
     source devel/setup.bash
     ```
@@ -65,7 +68,7 @@ source devel/setup.bash
         baud_rate        The Baud rate configured on the device. Default 115200
         comm_port        The COM port of the connected device. Default /dev/ttyUSB0
      ```
-     ***e.g. rosrun ros1-driver ros1_driver 115200 /dev/ttyUSB0***
+     ***e.g. rosrun ros1-driver ros1-driver 115200 /dev/ttyUSB0***
   2. Baud Rate, Comm Port and NTRIP as arguments:
      ```
      rosrun package_name package_name -B [baud_rate] -D [comm_port] -s [server_url] -m [mountpoint]  -u [username] -p [password]
@@ -77,12 +80,12 @@ source devel/setup.bash
        -u username      Username of your NTRIP account
        -p password      Password of your NTRIP account 
      ```
-     ***e.g. rosrun ros1-driver ros1_driver -B 115200 -D /dev/ttyUSB0 -s alldayrtk.com -m MOUNTPOINT_20  -u yourUsername -p yourPassword***
+     ***e.g. rosrun ros1-driver ros1-driver -B 115200 -D /dev/ttyUSB0 -s alldayrtk.com -m MOUNTPOINT_20  -u yourUsername -p yourPassword***
 
 
 ## Published Topics
-Use RQT Monitor to view published topics. Here you will find details on how to use RQT: https://index.ros.org/doc/ros2/Tutorials/RQt-Overview-Usage/
-- Run RQT Monitor by entering the following:
+Use RQT Monitor to view published topics. Here you will find details on how to use RQT: http://wiki.ros.org/rqt
+- Run RQT Monitor by entering the following on a new Terminal:
   ```
   rqt
   ```
