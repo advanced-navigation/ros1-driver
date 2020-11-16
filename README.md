@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is an example using the Advanced Navigation Spatial SDK to create a ROS2 driver that reads and decodes the Advanced Navigation Packet Protocol (ANPP) (in this case packet #20 and packet #28) and publishes the information as ROS topics / messages. 
+This is an example using the Advanced Navigation Spatial SDK to create a ROS1 driver that reads and decodes the Advanced Navigation Packet Protocol (ANPP) (in this case packet #20 and packet #28) and publishes the information as ROS topics / messages. 
 
 This example also includes the encoding of ANPP packet #55 and pushes the information to the Spatial INS.
 
@@ -10,10 +10,20 @@ It is designed to work with all Advanced Navigation INS devices using ANPP.
 
 The code has been written to be easy to understand and for ease of extensibility with other ANPP packets.
 
-This example has been developed and tested using **Ubuntu Linux v16.04 LTS** and **ROS1 Lunar**. Installation instructions for ROS2 can be found here: http://wiki.ros.org/lunar/Installation/Ubuntu
+This example has been developed and tested using **Ubuntu Linux v16.04 LTS** and **ROS1 Lunar**. Installation instructions for ROS1 can be found here: http://wiki.ros.org/lunar/Installation/Ubuntu
 
 If you require any assistance using this code, please email support@advancednavigation.com
 
+**NOTE: This ROS1 Drive does include**
+- Bug Fixes from [ros-drivers/advanced_navigation_driver](https://github.com/ros-drivers/advanced_navigation_driver/pulls):
+  - [High resource usage #11](https://github.com/ros-drivers/advanced_navigation_driver/pull/12)
+  - [Conform to ros conventions regarding frame id's and coordinate frames](https://github.com/ros-drivers/advanced_navigation_driver/pull/9)
+  - [Get quaternion from packet](https://github.com/ros-drivers/advanced_navigation_driver/pull/8)
+  - [Added loop rate to reduce CPU load](https://github.com/ros-drivers/advanced_navigation_driver/pull/7)
+  - [updates as requested](https://github.com/ros-drivers/advanced_navigation_driver/pull/5)
+- Added Features
+  - NTRIP Client Integration
+  - Logging ANPP
 
 
 ## ROS1 Getting Started Guide
